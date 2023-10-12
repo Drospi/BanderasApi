@@ -16,9 +16,6 @@ const Buscador = () => {
       .then(data => {
         setResults(data);
       })
-      .catch(error => {
-        console.error('Error fetching data: ', error);
-      });
   };
 
   return (
@@ -40,8 +37,9 @@ const Buscador = () => {
         {results.map(country => (
           <div className="country-card" key={country.name.common}>
             <img src={country.flags.svg} alt={`${country.name.common} Flag`} />
-            <p>Region: {country.population}</p>  
-            <p>Region: {country.capital}</p>
+            <h2>{country.name.common}</h2>
+            <p>Población: {country.population}</p>  
+            <p>Capital: {country.capital}</p>
             <p>Region: {country.region}</p>
           </div>
         ))}
