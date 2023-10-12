@@ -40,10 +40,8 @@ const Buscador = () => {
         {results.map(country => (
           <div className="country-card" key={country.name.common}>
             <img src={country.flags.svg} alt={`${country.name.common} Flag`} />
-            <h2>{country.name.common}</h2>
-            <p>Population: {country.population}</p>
-            <p>Region: {country.region}</p>
-            <p>Capital: {country.capital}</p>
+            <p>Continente: {country.region}</p>
+            {/* No hay información sobre el escudo en la API */}
           </div>
         ))}
       </div>
