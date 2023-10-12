@@ -1,5 +1,5 @@
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -9,6 +9,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
   }
   
   form {
@@ -40,3 +41,23 @@
   button:hover {
     background-color: #218838;
   }
+  
+  .results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .country-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .country-card img {
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+  

@@ -36,12 +36,14 @@ const Buscador = () => {
           </button>
         </form>
       </nav>
-      {/* Renderizar los resultados */}
+      {/* Renderizar los resultados en una cuadrícula */}
       <div className="results">
         {results.map(country => (
-          <div key={country.name.common}>
+          <div className="country-card" key={country.name.common}>
             <h2>{country.name.common}</h2>
-            {/* Aqui es Para mostrar más detalles sobre los Paises */}
+            <img src={country.flags.svg} alt={`${country.name.common} Flag`} />
+            <p>Continente: {country.region}</p>
+            {/* No hay información sobre el escudo en la API */}
           </div>
         ))}
       </div>
